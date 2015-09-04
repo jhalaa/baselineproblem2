@@ -20,4 +20,8 @@ public class TaxCalculator {
         else
             return 0.0;
     }
+
+    public double salesTax() {
+        return 0;
+    }
 }

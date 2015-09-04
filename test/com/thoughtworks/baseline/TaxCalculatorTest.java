@@ -43,4 +43,10 @@ public class TaxCalculatorTest {
         assertEquals(0.0,taxCalculator.importTax(),0.01);
     }
 
+    @Test
+    public void totalSalesTaxShouldBeZeroIfFoodAndNotImpoted() {
+        TaxCalculator taxCalculator = new TaxCalculator("4 chocolates");
+        assertEquals(0.0,taxCalculator.salesTax(),0.01);
+    }
+
 }

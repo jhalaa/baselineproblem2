@@ -22,6 +22,8 @@ public class TaxCalculator {
     }
 
     public double salesTax() {
-        return 0;
+        String[] inputSplit = inputString.split(" ");
+        double importTax =Double.parseDouble((inputSplit[inputSplit.length -1])) + Double.parseDouble((inputSplit[inputSplit.length -1])) * importTax()/100;
+        return importTax ;
     }
 }

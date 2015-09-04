@@ -13,7 +13,7 @@ public class TaxCalculatorApplication {
             Scanner scanner = new Scanner(System.in);
             inputString = scanner.nextLine();
             taxCalculator = new TaxCalculator(inputString);
-            salesTax = taxCalculator.salesTax();
+            salesTax += taxCalculator.salesTax();
         }
         System.out.println(salesTax);
         

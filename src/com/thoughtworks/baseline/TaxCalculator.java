@@ -18,7 +18,7 @@ public class TaxCalculator {
         if(inputString.contains("imported"))
             return 5.0;
         else
-            return 0.0;
+            return 0;
     }
 
     public double salesTax() {

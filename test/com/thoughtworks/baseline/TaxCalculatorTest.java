@@ -25,4 +25,10 @@ public class TaxCalculatorTest {
         assertEquals(0.0,taxCalculator.basicSalesTax(),0.01);
     }
 
+    @Test
+    public void basicSalesTaxZeroForFood() {
+        TaxCalculator taxCalculator = new TaxCalculator("4 chocolates");
+        assertEquals(0.0,taxCalculator.basicSalesTax(),0.01);
+    }
+
 }

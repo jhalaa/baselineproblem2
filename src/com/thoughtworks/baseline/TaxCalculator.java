@@ -7,7 +7,7 @@ public class TaxCalculator {
     }
 
     public double basicSalesTax() {
-        if(inputString.contains("book") || inputString.contains("pill"))
+        if(inputString.contains("book") || inputString.contains("pill") || inputString.contains("chocolate"))
             return 0;
         else
             return 10.0;

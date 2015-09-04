@@ -61,4 +61,10 @@ public class TaxCalculatorTest {
         assertEquals(16.49,taxCalculator.salesTax(),0.01);
     }
 
+    @Test
+    public void salesTaxShouldBeCalculatedIfBothBasicTaxAndImportTaxApplies() {
+        TaxCalculator taxCalculator = new TaxCalculator("1 imported bottle of perfume  at 27.99");
+        assertEquals(32.19,taxCalculator.salesTax(),0.01);
+    }
+
 }

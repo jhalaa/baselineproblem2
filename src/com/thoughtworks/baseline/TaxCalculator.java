@@ -12,4 +12,8 @@ public class TaxCalculator {
         else
             return 10.0;
     }
+
+    public double importTax() {
+        return 5.0;
+    }
 }

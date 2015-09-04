@@ -31,4 +31,10 @@ public class TaxCalculatorTest {
         assertEquals(0.0,taxCalculator.basicSalesTax(),0.01);
     }
 
+    @Test
+    public void importTaxIsFivePercentForAllImportedItems() {
+        TaxCalculator taxCalculator = new TaxCalculator("4 imported chocolates");
+        assertEquals(5.0,taxCalculator.importTax(),0.01);
+    }
+
 }

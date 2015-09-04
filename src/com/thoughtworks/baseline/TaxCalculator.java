@@ -14,6 +14,9 @@ public class TaxCalculator {
     }
 
     public double importTax() {
-        return 5.0;
+        if(inputString.contains("imported"))
+            return 5.0;
+        else
+            return 0.0;
     }
 }

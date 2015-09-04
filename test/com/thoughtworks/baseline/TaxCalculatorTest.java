@@ -52,19 +52,25 @@ public class TaxCalculatorTest {
     @Test
     public void salesTaxShouldBeCalculatedIfImpoted() {
         TaxCalculator taxCalculator = new TaxCalculator("1 imported chocolates at 10.0");
-        assertEquals(10.50,taxCalculator.salesTax(),0.01);
+        assertEquals(10.50,taxCalculator.CostWithSalesTax(),0.01);
     }
 
     @Test
     public void salesTaxShouldBeCalculatedIfBasicTaxApplies() {
         TaxCalculator taxCalculator = new TaxCalculator("1 CD  at 14.99");
-        assertEquals(16.49,taxCalculator.salesTax(),0.01);
+        assertEquals(16.49,taxCalculator.CostWithSalesTax(),0.01);
     }
 
     @Test
     public void salesTaxShouldBeCalculatedIfBothBasicTaxAndImportTaxApplies() {
         TaxCalculator taxCalculator = new TaxCalculator("1 imported bottle of perfume  at 27.99");
-        assertEquals(32.19,taxCalculator.salesTax(),0.01);
+        assertEquals(32.19,taxCalculator.CostWithSalesTax(),0.01);
+    }
+
+    @Test
+    public void totalTaxCalculated() {
+        TaxCalculator taxCalculator = new TaxCalculator("1 imported bottle of perfume  at 27.99");
+        assertEquals(4.2,taxCalculator.salesTax(),0.01);
     }
 
 }

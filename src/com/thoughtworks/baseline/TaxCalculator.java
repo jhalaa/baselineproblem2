@@ -23,7 +23,8 @@ public class TaxCalculator {
 
     public double salesTax() {
         String[] inputSplit = inputString.split(" ");
-        double importTax =Double.parseDouble((inputSplit[inputSplit.length -1])) + Double.parseDouble((inputSplit[inputSplit.length -1])) * importTax()/100;
-        return importTax ;
+        double importTax = Double.parseDouble((inputSplit[inputSplit.length -1])) * importTax()/100;
+        double salesTax =Double.parseDouble((inputSplit[inputSplit.length -1])) * basicSalesTax()/100;
+        return Double.parseDouble((inputSplit[inputSplit.length -1])) + salesTax + importTax ;
     }
 }

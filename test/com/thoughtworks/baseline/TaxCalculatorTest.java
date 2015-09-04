@@ -50,9 +50,15 @@ public class TaxCalculatorTest {
     }
 
     @Test
-    public void salesTaxShouldBeCalculated() {
+    public void salesTaxShouldBeCalculatedIfImpoted() {
         TaxCalculator taxCalculator = new TaxCalculator("1 imported chocolates at 10.0");
         assertEquals(10.50,taxCalculator.salesTax(),0.01);
+    }
+
+    @Test
+    public void salesTaxShouldBeCalculatedIfBasicTaxApplies() {
+        TaxCalculator taxCalculator = new TaxCalculator("1 CD  at 14.99");
+        assertEquals(16.49,taxCalculator.salesTax(),0.01);
     }
 
 }

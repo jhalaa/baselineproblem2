@@ -1,5 +1,6 @@
 package com.thoughtworks.baseline;
 
+//calculates the tax for an item
 public class TaxCalculator {
     String inputString;
     public TaxCalculator(String inputString) {
